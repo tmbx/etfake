@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B66DC10-C85B-4529-A4A7-A8650CD36DBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EtFake</RootNamespace>
+    <AssemblyName>EtFake</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="etkwm\KcsLib\KBase.cs" />
+    <Compile Include="etkwm\KcsLib\KDate.cs" />
+    <Compile Include="etkwm\KcsLib\KFile.cs" />
+    <Compile Include="etkwm\KcsLib\KSocket.cs" />
+    <Compile Include="etkwm\KcsLib\KSyscalls.cs" />
+    <Compile Include="etkwm\KcsLib\KUtil.cs" />
+    <Compile Include="etkwm\KcsLib\KWorkerThread.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\FilterByExtension.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\IFolderFilter.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\IFolderFilterSite.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\IMalloc.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\IShellFolder.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellAddRecent.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellApi.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellBrowseForFolderDialog.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellExecute.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellFileOperation.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellFunctions.cs" />
+    <Compile Include="etkwm\KcsLib\ShellLib\ShellGUIDs.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\ApplicationMonitor.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\ControlMonitor.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\HookMonitor.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\IInactivityMonitor.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\LastInputMonitor.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\MonitorBase.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\MonitorCreator.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\MonitorType.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\User32.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\Win32Hook.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\Win32LastInputInfo.cs" />
+    <Compile Include="etkwm\KcsLib\UserInactivityMonitor\Win32Message.cs" />
+    <Compile Include="etkwm\KwmLib\AnpMsg.cs" />
+    <Compile Include="etkwm\KwmLib\AnpTransport.cs" />
+    <Compile Include="etkwm\KwmLib\Console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etkwm\KwmLib\Console.Designer.cs">
+      <DependentUpon>Console.cs</DependentUpon>
+    </Compile>
+    <Compile Include="etkwm\KwmLib\ConsoleMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="etkwm\KwmLib\ConsoleMessage.Designer.cs">
+      <DependentUpon>ConsoleMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="etkwm\KwmLib\EAnp.cs" />
+    <Compile Include="etkwm\KwmLib\EAnpBroker.cs" />
+    <Compile Include="etkwm\KwmLib\EAnpThread.cs" />
+    <Compile Include="etkwm\KwmLib\HttpQuery.cs" />
+    <Compile Include="etkwm\KwmLib\KAnp.cs" />
+    <Compile Include="etkwm\KwmLib\KwmLogging.cs" />
+    <Compile Include="etkwm\KwmLib\KwmUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="etkwm\KwmLib\Console.resx">
+      <DependentUpon>Console.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="etkwm\KwmLib\ConsoleMessage.resx">
+      <DependentUpon>ConsoleMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WmUi.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
